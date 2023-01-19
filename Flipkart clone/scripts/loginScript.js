@@ -1,0 +1,1 @@
+Ls_data=JSON.parse(localStorage.getItem("cart"))

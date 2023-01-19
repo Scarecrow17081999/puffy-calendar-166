@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --blue: #287ff0;
+    --yellow: #ffe11b;
+    --ripeOrange: #fb641b;
+    --green: #388e3c;
+    --orange: #ff9f01;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
