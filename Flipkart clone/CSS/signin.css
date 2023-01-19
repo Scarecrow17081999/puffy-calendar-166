@@ -1,0 +1,312 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --blue: #287ff0;
+    --yellow: #ffe11b;
+    --ripeOrange: #fb641b;
+    --green: #388e3c;
+    --orange: #ff9f01;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+
+.navcontainer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+}
+
+body {
+    background-color: rgb(156, 156, 156);
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.navcontainer {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    background-color: #2874f0;
+}
+
+.nav {
+    height: 60px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    z-index: 7;
+    justify-content: space-around;
+}
+
+.left {
+    display: inline-block;
+}
+
+.left img {
+    cursor: pointer;
+}
+
+.mid img {
+    height: 22px;
+    top: 18px;
+    right: 40rem;
+    cursor: pointer;
+}
+
+.mid input {
+    margin-right: 5%;
+    width: 34rem;
+    height: 36px;
+    padding: 16px;
+}
+
+.mid input::placeholder {
+    font-size: 14px;
+}
+
+.btn {
+    text-align: center;
+    width: 10%;
+    margin-left: 50px;
+    top: 14px;
+    right: 26rem;
+    /* background-color: #fff; */
+    margin-right: 5%;
+}
+
+.btn button {
+    height: 32px;
+    padding: 5px 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: flex;
+
+}
+
+.btn h1 a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2874f0;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav>div>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .6rem;
+    margin: auto;
+}
+
+nav>div>a>h1 {
+    margin-right: 5%;
+
+}
+
+nav>a {
+    display: flex;
+    width: 2%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: .6rem;
+}
+
+nav>a>img {
+    height: 100%;
+
+}
+
+.loginpageside {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 550px;
+    background-color: #2874f0;
+}
+
+.loginpage {
+
+    display: flex;
+    height: 555px;
+    position: absolute;
+    width: 900px;
+    top: 110px;
+    left: 300px;
+}
+
+.loginpage>div>.button-cross {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    top: -0;
+    left: 499px;
+    bottom: 800px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+
+
+    background-color: rgb(216, 216, 216);
+    color: black;
+}
+
+#par1 {
+    color: white;
+    position: absolute;
+    top: 43px;
+    left: 10;
+    left: 35px;
+    font-size: 28px;
+    font-weight: 600;
+    display: block;
+}
+
+#par2 {
+    display: block;
+    position: absolute;
+    color: #dbdbdb;
+    left: 35px;
+    line-height: 150%;
+    top: 125px;
+    font-weight: 600;
+}
+
+.loginpageside img {
+    width: 240px;
+    position: relative;
+    top: 310px;
+    left: 60px;
+}
+
+.form {
+    position: relative;
+    /* top: 0px; */
+    /* left: 360px; */
+    width: 60%;
+    height: 550px;
+    background-color: white;
+}
+
+.form #mail {
+    color: gray;
+    font-size: 14px;
+    position: relative;
+    top: 55px;
+    left: 35px;
+}
+
+#gmail {
+    position: absolute;
+    top: 75px;
+    left: 35px;
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid #2874f0;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* .form #pass {
+    color: gray;
+    font-size: 14px;
+    position: absolute;
+    top: 120px;
+    left: 35px;
+} */
+
+/* #password {
+    position: absolute;
+    top: 140px;
+    left: 35px;
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid #2874f0;
+} */
+
+.form p {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+    top: 100px;
+    left: 35px;
+}
+
+.form span {
+    color: #2874f0;
+    cursor: pointer;
+}
+
+.form button:not(.button-cross) {
+    position: relative;
+    top: 120px;
+    left: 35px;
+    width: 80%;
+    height: 45px;
+    font-size: 15px;
+    color: white;
+    background-color: #fb641b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.form p>a {
+    color: #2874f0;
+}
+
+#PAR {
+    top: 215px;
+    left: 235px;
+    font-size: 14px;
+    display: block;
+}
+
+#btn {
+    background: white;
+    color: #2874f0;
+    box-shadow: 0px 2px 4px grey;
+    top: 140px;
+    display: block;
+}
+
+#para2 {
+    top: 360px;
+    font-size: 14px;
+    font-weight: 600;
+    left: 140px;
+    color: #2874f0;
+    cursor: pointer;
+}
+
+#forget {
+    top: -12px;
+    left: 417px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #2874f0;
+}
+
