@@ -17,4 +17,120 @@
     border: none;
     text-transform: capitalize;
     transition: all 0.2s linear;
+    text-decoration: none;
+}
+
+.navcontainer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+}
+
+.body {
+    background-color: rgb(241, 241, 241);
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.navcontainer {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    background-color: #2874f0;
+}
+
+.nav {
+    height: 60px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    z-index: 7;
+    justify-content: space-around;
+}
+
+.left {
+    display: inline-block;
+}
+
+.left img {
+    cursor: pointer;
+}
+
+.mid img {
+    height: 22px;
+    top: 18px;
+    right: 40rem;
+    cursor: pointer;
+}
+
+.mid input {
+    margin-right: 5%;
+    width: 34rem;
+    height: 36px;
+    padding: 16px;
+}
+
+.mid input::placeholder {
+    font-size: 14px;
+}
+
+.btn {
+    text-align: center;
+    width: 10%;
+    margin-left: 50px;
+    top: 14px;
+    right: 26rem;
+    /* background-color: #fff; */
+    margin-right: 5%;
+}
+
+.btn button {
+    height: 32px;
+    padding: 5px 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: flex;
+
+}
+
+.btn h1 a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2874f0;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav>div>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .6rem;
+    margin: auto;
+}
+
+nav>div>a>h1 {
+    margin-right: 5%;
+
+}
+
+nav>a {
+    display: flex;
+    width: 2%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: .6rem;
+}
+
+nav>a>img {
+    height: 100%;
+
 }
