@@ -1,42 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/cartPage.css">
-</head>
-<body>
-<div class="navcontainer">
-    <nav class="nav">
+    <link rel="stylesheet" href="./CSS/cartPage.css" />
+    <link rel="icon" href="./assets/Black Simple Clothing Brand Logo(1).png">
+  </head>
+  <body>
+    <div class="navcontainer">
+      <nav class="nav">
         <div class="left">
-            <img width="75" src="./assets/flipkart5.jpg" alt="">
+          <a href="./index.html"><img width="75" src="./assets/flipkart5.jpg" alt="" /></a>
         </div>
         <div class="mid">
-            <input type="search" placeholder="Search for products, brands and more">
-
+          <input
+            type="search"
+            placeholder="Search for products, brands and more"
+          />
         </div>
         <div class="btn">
-            <button>
-                <h1><a href="">Login</a></h1>
-            </button>
+          <button>
+            <h1><a href="">Login</a></h1>
+          </button>
         </div>
         <div>
-            <a href="">
-                <h1>Become a Seller</h1>
-            </a>
+          <a href="">
+            <h1>Become a Seller</h1>
+          </a>
         </div>
         <div>
-            <a href="">
-                <h1>More</h1>
-            </a>
+          <a href="">
+            <h1>More</h1>
+          </a>
         </div>
-        <a href="./cart.html"><img src="./assets/cart.png" alt="">
-            <h2>Cart</h2>
+        <a href="./cart.html"
+          ><img src="./assets/cart.png" alt="" />
+          <h2>Cart</h2>
         </a>
-    </nav>
+      </nav>
+    </div>
+
+
+ 
+<main>
+
+
+<div id="total_amount">
+  <div>PRICE DETAILS</div>
+<hr>
+  <div>
+    <div>Price(item)</div>
+    <div>Total price</div>
+  </div>
+
+  <div>
+    <div>Discount </div>
+    <div>Total</div>
+  </div>
+
+  <div>
+    <div>Delivery charges</div>
+    <div>FREE</div>
+  </div>
+<hr>
+  <div>
+    <div>Total Amount</div>
+    <div>Total</div>
+  </div>
+ 
 </div>
-</body>
-<script src="./scripts/cartScript.js"></script>
+
+
+<div class="content">
+
+
+            <div id="flipkart-grocery" >
+<div><p>Flipkart <span id="total-items"></span></p></div>
+<div><p>GROCERY <span class="total-items"></span></p></div>
+            </div>
+
+
+
+            <div id="address-div">
+                <div>
+                    <p>From Saved Address </p>
+                </div>
+                <div>
+                  <button>Enter Delivery Pincode</button>
+                </div>
+            </div>
+
+
+
+        <div class="product-container">
+
+         
+            <div>
+              <div><img class="list_image" src="./assets/Black Simple Clothing Brand Logo(1).png" alt="">
+              </div>
+              <div>
+                <p>WAHL Pure Confidence Trimmer 150 min</p>
+                <p><span>₹1,299 </span><span>56% Off3 offers applied</span></p>
+            
+                <div class="cart-remove-button">
+                  <button><strong>SAVE FOR LATER</strong></button>
+                  <button><strong>REMOVE</strong> </button>
+                </div>
+              </div>
+            
+            </div>
+
+            <div id="warranty-div">
+                
+
+            </div>
+
+        </div>       
+            <div id="place_order">
+              <button>PLACE ORDER</button>
+            </div>
+          
+          
+</div>
+
+
+
+<!-- 
+
+            </div>
+        </div> -->
+
+   
+
+       
+    </main>
+
+
+    <footer>
+      <hr />
+      <div class="footer-content">
+        <div >
+          <p>Policies:Returns Policy | Terms of useSecurity  |Privacy | Infringement</p>
+          <p>© 2007-2023 Flipkart.com</p>
+        </div>
+
+        <p>
+          <span>Need help? Visit the Help Center</span> or<span
+            >Contact Us</span
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="./scripts/cartScript.js"></script>
 </html>
