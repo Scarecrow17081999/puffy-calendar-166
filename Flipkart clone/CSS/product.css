@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
 
 :root {
     --blue: #287ff0;
@@ -206,6 +206,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border: solid rgb(210, 210, 210) 1px;
     border-radius: 5px;
     margin-top: 15px;
+    margin-right: 20px;
 
 }
 .button-div>button:nth-child(1) {

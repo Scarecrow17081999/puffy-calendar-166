@@ -1,136 +1,387 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap");
 
 :root {
-    --blue: #287ff0;
-    --yellow: #ffe11b;
-    --ripeOrange: #fb641b;
-    --green: #388e3c;
-    --orange: #ff9f01;
+  --blue: #287ff0;
+  --yellow: #ffe11b;
+  --ripeOrange: #fb641b;
+  --green: #388e3c;
+  --orange: #ff9f01;
+  --lightgray: #f1f3f6;
+  --darkgray: #c8c8c8;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Roboto, Arial, sans-serif;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
-    transition: all 0.2s linear;
-    text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  text-decoration: none;
 }
 
 .navcontainer {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
 
-.body {
-    background-color: rgb(241, 241, 241);
-    overflow-x: hidden;
+body {
+  background-color: #f1f3f6;
+  overflow-x: hidden;
 }
 
 /* CONTAINER */
 .navcontainer {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    background-color: #2874f0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  background-color: #2874f0;
 }
 
 .nav {
-    height: 60px;
-    width: 75%;
-    display: flex;
-    align-items: center;
-    z-index: 7;
-    justify-content: space-around;
+  height: 60px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  z-index: 7;
+  justify-content: space-around;
 }
 
 .left {
-    display: inline-block;
+  display: inline-block;
 }
 
 .left img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .mid img {
-    height: 22px;
-    top: 18px;
-    right: 40rem;
-    cursor: pointer;
+  height: 22px;
+  top: 18px;
+  right: 40rem;
+  cursor: pointer;
 }
 
 .mid input {
-    margin-right: 5%;
-    width: 34rem;
-    height: 36px;
-    padding: 16px;
+  margin-right: 5%;
+  width: 34rem;
+  height: 36px;
+  padding: 16px;
 }
 
 .mid input::placeholder {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .btn {
-    text-align: center;
-    width: 10%;
-    margin-left: 50px;
-    top: 14px;
-    right: 26rem;
-    /* background-color: #fff; */
-    margin-right: 5%;
+  text-align: center;
+  width: 10%;
+  margin-left: 50px;
+  top: 14px;
+  right: 26rem;
+  /* background-color: #fff; */
+  margin-right: 5%;
 }
 
 .btn button {
-    height: 32px;
-    padding: 5px 40px;
-    background-color: #fff;
-    border-radius: 2px;
-    border: 1px solid #dbdbdb;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    display: flex;
-
+  height: 32px;
+  padding: 5px 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
 }
 
 .btn h1 a {
-    font-size: 16px;
-    font-weight: 500;
-    color: #2874f0;
-    position: relative;
-    top: -3px;
-    text-decoration: none;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2874f0;
+  position: relative;
+  top: -3px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-nav>div>a {
-    text-decoration: none;
-    color: #fff;
-    font-size: .6rem;
-    margin: auto;
+nav > div > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.6rem;
+  margin: auto;
 }
 
-nav>div>a>h1 {
-    margin-right: 5%;
-
+nav > div > a > h1 {
+  margin-right: 5%;
 }
 
-nav>a {
-    display: flex;
-    width: 2%;
-    height: 100%;
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: .6rem;
+nav > a {
+  display: flex;
+  width: 2%;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.6rem;
 }
 
-nav>a>img {
-    height: 100%;
+nav > a > img {
+  height: 100%;
+}
 
+.content {
+  /* height: 100vh; */
+
+  width: 700px;
+  background-color: #f1f3f6;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#idk-container {
+  display: flex;
+  background-color: #000000;
+}
+
+#flipkart-grocery {
+  /* border: black solid; */
+  width: 100%;
+  height: 50px;
+  /* border-radius: 15px; */
+  background-color: #fffdfd;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  align-items: center;
+  color: #2874f0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 15px;
+}
+
+#address-div {
+  /* border: black solid; */
+  width: 100%;
+  height: 65px;
+  /* border-radius: 15px; */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  align-items: center;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 12px 30px;
+  margin-top: 10px;
+}
+#address-div div > button {
+  border-radius: 5px;
+  color: #2874f0;
+  background-color: #fff;
+  padding: 12px 50px;
+  border: rgb(232, 232, 232) solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#address-div div > button:hover {
+  cursor: pointer;
+}
+#address-div div > button:active {
+  background-color: rgb(196, 196, 196);
+}
+.product-container > div {
+  /* border: red solid; */
+  display: flex;
+  margin-top: 10px;
+  background-color: white;
+  padding: 20px;
+}
+.product-container div > div:nth-child(1) {
+  /* border: rgb(42, 30, 30) solid; */
+  display: flex;
+  width: 25%;
+  /* padding: 20px; */
+}
+.list_image {
+  /* border: rgb(42, 30, 30) solid; */
+  width: 100%;
+
+  border-radius: 2px;
+}
+.product-container > div:nth-child(even) > button {
+  background-color: #ebebeb;
+  width: 30px;
+  height: 30px;
+  border-radius: 115px;
+  font-size: 20px;
+}
+.product-container > div:nth-child(even) > input {
+  border: #e3e3e3 solid 1px;
+  width: 20px;
+  height: 30px;
+  margin: 0 5px 0 5px;
+  padding: 0px;
+  padding-left: 3px;
+  /* padding-right:  */
+}
+.product-container > div:nth-child(even) > button:active {
+  background-color: #b3b3b3;
+}
+.product-container div > div:nth-child(2) {
+  /* border: red solid; */
+  /* border: rgb(49, 130, 217) solid; */
+  /* display: flex; */
+  width: 75%;
+  line-height: 30px;
+  padding: 20px;
+}
+.product-container div > div:nth-child(2) button {
+  background-color: white;
+  margin-left: 15px;
+}
+
+#place_order {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  /* margin-top: 10px; */
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#place_order > button {
+  background-color: #fb641b;
+  color: white;
+  width: 200px;
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#place_order > button:active {
+  background-color: #ab3901;
+}
+#place_order > button:hover {
+  cursor: pointer;
+}
+#warranty-div {
+  margin-top: 0px;
+}
+
+.cart-remove-button {
+}
+
+main {
+  display: flex;
+  margin: auto;
+
+  width: 70%;
+}
+
+#total_amount {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  width: 500px;
+  height: 300px;
+  order: 2;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: 400;
+}
+#total_amount > div:nth-child(1) {
+  width: 100%;
+
+  color: #b3b3b3;
+}
+
+#total_amount > div:nth-child(3) {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+#total_amount > div:nth-child(3) > div:nth-child(2) {
+}
+#total_amount > div:nth-child(3) {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+#total_amount > div:nth-child(4) {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+#total_amount > div:nth-child(5) {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+#total_amount > div:nth-child(7) {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+#total_amount > hr {
+  border: none;
+  border-top: 1px dotted rgb(209, 209, 209);
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  top: 30px;
+  font-size: 12px;
+  width: 100vw;
+}
+.footer-content {
+  padding: 10px 40px;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #cacaca;
+  height: 1px;
+}
+
+span {
+  color: #2874f0;
+}
+
+.footer-content {
+  font-weight: 200;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.footer-content > div {
+  display: flex;
+}
+
+p {
+  font-weight: 400;
+}
+
+.flipkart-grocery {
+  width: 90%;
+  background-color: #fff;
 }
