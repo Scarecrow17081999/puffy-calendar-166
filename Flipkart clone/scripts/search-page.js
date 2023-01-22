@@ -1,5 +1,7 @@
+
 //PRODUCT DATABASE
 let productLsdata;
+
 ProductData = [
   {
     Name: "Tops",
@@ -402,6 +404,7 @@ ProductData = [
     quantity: 1,
   },
 ];
+
 let z = ProductData;
 let mainpage_search_input =
   JSON.parse(localStorage.getItem("search_input")) || "";
@@ -580,11 +583,11 @@ display = (data) => {
 
     let div1 = document.createElement("div");
     div1.setAttribute("class", "product-image");
-
     let div2 = document.createElement("div");
     div2.setAttribute("class", "product-details");
     let div3 = document.createElement("div");
     div3.setAttribute("class", "product-price");
+
     let h3 = document.createElement("h3");
     h3.innerText = element.Name;
     let button = document.createElement("button");
