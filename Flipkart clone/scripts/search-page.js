@@ -1,3 +1,7 @@
+
+//PRODUCT DATABASE
+let productLsdata;
+
 ProductData = [
   {
     Name: "Tops",
@@ -401,26 +405,181 @@ ProductData = [
   },
 ];
 
+let z = ProductData;
 let mainpage_search_input =
   JSON.parse(localStorage.getItem("search_input")) || "";
+// ELEMENT CATCHING AS LOCALSTORAGE SETTING
+console.log(mainpage_search_input);
 let search_button = document.querySelector(".btn>button:nth-child(1)");
 let search_input = document.querySelector(".mid>input");
+let body = document.getElementById("product-container");
+
+// PRICE FILTER
+let min_price_val = document.getElementById("min-price");
+let max_price_val = document.getElementById("max-price");
+let price_button = document.querySelector(
+  "#price-filter>div:nth-child(3)>button"
+);
+price_button.addEventListener("click",()=>{
+
+let filtered_by_price=ProductData.filter((el)=>{
+return (Number(min_price_val.value)<= Number(el.price)&&Number(max_price_val.value)>=Number(el.price))
+//  console.log( Number(el.price)>=Number(min_price_val.value&&Number(el.price)<= Number(max_price_val.value)));
+})
+if(filtered_by_price.length==0){
+    alert("NO DATA")
+}else{
+
+    display(filtered_by_price)
+}
+    console.log('lol');
+})
+
+
+
+
+
+
 
 search_button.addEventListener("click", (e) => {
   e.preventDefault();
+  mainpage_search_input = search_input.value;
   localStorage.setItem("search_input", JSON.stringify(search_input.value));
+  console.log(mainpage_search_input);
+  console.log(search_input.value);
+  search(mainpage_search_input);
+});
+//(RATING FILTER)
+let sort_value = document.getElementById("sort");
+let rating_button = document.querySelector(
+  "#rating-filter>div:nth-child(3)>button"
+);
+let rating_value = document.getElementById("rating-value");
+
+rating_button.addEventListener("click", () => {
+  if (rating_value.value <= 1) {
+    let x = ProductData.filter((element) => {
+      if (element.rating <= 1) {
+        return true;
+      }
+    });
+    if(x.length==0){
+        alert("NO DATA")
+    }else{
+
+        display(x);
+    }
+  }
+  if (rating_value.value <= 2 && rating_value.value > 1) {
+    let x = ProductData.filter((element) => {
+      if (element.rating <= 2 && element.rating > 1) {
+        return true;
+      }
+    });
+     if(x.length==0){
+        alert("NO DATA")
+    }else{
+
+        display(x);
+    }
+  }
+  if (rating_value.value <= 3 && rating_value.value > 2) {
+    let x = ProductData.filter((element) => {
+      if (element.rating <= 3 && element.rating > 2) {
+        return true;
+      }
+    });
+      if(x.length==0){
+        alert("NO DATA")
+    }else{
+
+        display(x);
+    }
+  }
+  if (rating_value.value <= 4 && rating_value.value > 3) {
+    let x = ProductData.filter((element) => {
+      if (element.rating <= 4 && element.rating > 3) {
+        return true;
+      }
+    });
+      if(x.length==0){
+        alert("NO DATA")
+    }else{
+
+        display(x);
+    }
+  }
+  if (rating_value.value <= 5 && rating_value.value >4) {
+    let x = ProductData.filter((element) => {
+      if (element.rating <= 5 && element.rating >4) {
+        return true;
+      }
+    });
+      if(x.length==0){
+        alert("NO DATA")
+    }else{
+
+        display(x);
+    }
+  }
 });
 
-let body = document.getElementById("product-container");
+//SORT FITER
+sort_value.addEventListener("change", (e) => {
+  let sort_type = e.target.value;
+
+  if (sort_type === "") {
+    let sorted_data = ProductData.sort(() => {});
+    console.log(sorted_data);
+    display(sorted_data);
+  }
+  if (sort_type === "ascending") {
+    let sorted_data = ProductData.sort(function (a, b) {
+      return a.Name < b.Name ? -1 : 1;
+    });
+    display(sorted_data);
+  }
+  if (sort_type === "descending") {
+    let sorted_data = ProductData.sort(function (a, b) {
+      return a.Name > b.Name ? -1 : 1;
+    });
+    display(sorted_data);
+  }
+});
+//SEARCH FILTER
+search = (mainpage_search_input) => {
+  let search_data = ProductData.filter((element) => {
+    if (
+      element.Name.toUpperCase().includes(mainpage_search_input.toUpperCase())
+    ) {
+
+      return element;
+    } else {
+      return false;
+    }
+   
+  });
+  display(search_data);
+};
 
 
-
+//DISPLAY FUNCTION AND APPEND
 display = (data) => {
+  body.innerHTML = "";
   data.forEach((element) => {
     let div = document.createElement("div");
-
-    let image=document.createElement("img");
+    let anchor=document.createElement("a")
+    div.style.border="red solid 1px"
     
+      div.addEventListener("click", () => {
+        anchor.href = "./product.html";
+        anchor.target = "new";
+        productLsdata = element;
+        localStorage.setItem("product", JSON.stringify(productLsdata));
+      });
+
+    let image = document.createElement("img");
+    image.src = element.image;
 
     let div1 = document.createElement("div");
     div1.setAttribute("class", "product-image");
@@ -429,8 +588,34 @@ display = (data) => {
     let div3 = document.createElement("div");
     div3.setAttribute("class", "product-price");
 
-    div.append(div1,div2,div3)
+    let h3 = document.createElement("h3");
+    h3.innerText = element.Name;
+    let button = document.createElement("button");
+    button.innerText = element.rating;
+    let unordered_list = document.createElement("ul");
+    let list_item1 = document.createElement("li");
+    list_item1.innerText = `32 MB RAM | 32 MB ROM | Expandable Upto 32 GB`;
+    let list_item2 = document.createElement("li");
+    list_item2.innerText = `4.57 cm (1.8 inch) Display`;
+    let list_item3 = document.createElement("li");
+    list_item3.innerText = `0.8MP Rear Camera`;
+    let list_item4 = document.createElement("li");
+    list_item4.innerText = `2750 mAh Battery`;
+    let h2 = document.createElement("h2");
+    h2.innerText = `₹ ${element.price}`;
+    let div4 = document.createElement("div");
+
+    let logo_image = document.createElement("img");
+    // logo_image.src = "./fa_62673a.png";
+
+    unordered_list.append(list_item1, list_item2, list_item3, list_item4);
+anchor.append(image)
+    div3.append(h2, div4);
+    div2.append(h3, button, unordered_list);
+    div1.append(anchor);
+    div.append(div1, div2, div3);
     body.append(div);
   });
 };
-display(ProductData);
+
+

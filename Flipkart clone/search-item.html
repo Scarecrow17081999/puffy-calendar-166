@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Search Menu</title>
     <link rel="stylesheet" href="./CSS/search-page.css" />
     <link rel="icon" href="./assets/Black Simple Clothing Brand Logo(1).png" />
   </head>
@@ -51,21 +51,26 @@
         <div id="price-filter">
           <div>Filter by Price</div>
           <div>
-            <input type="text" name="" id="" placeholder="min" />
+            <input type="text" name="" id="min-price" placeholder="min" />
             <p>to</p>
-            <input type="text" name="" id="" placeholder="max" />
+            <input type="text" name="" id="max-price" placeholder="max" />
           </div>
           <div><button>Filter</button></div>
         </div>
         <hr />
         <div id="rating-filter">
           <div>Filter by rating</div>
-          <div><input type="text" name="" id="" placeholder="rating" /></div>
+          <div>
+            <input id="rating-value"  type="range" min="1" max="5" name="" placeholder="rating" />
+          
+          </div>
+
+
           <div><button>Filter</button></div>
         </div>
         <hr />
         <div id="name-sort">
-          <select name="" id="">
+          <select name="" id="sort">
             <option value="">Sort by Name</option>
             <option value="ascending">Ascending</option>
             <option value="descending">Descending</option>
@@ -76,23 +81,25 @@
       <div id="product-container">
         <div>
           <div class="product-image">
-            <img
+            <!-- <img
               src="./assets/Black Simple Clothing Brand Logo(1).png"
               alt=""
-            />
+            /> -->
           </div>
           <div class="product-details">
-            <h3>Simple Clothing Brand</h3>
+            <!-- <h3>Simple Clothing Brand</h3>
             <button>2.6</button>
             <ul>
               <li>32 MB RAM | 32 MB ROM | Expandable Upto 32 GB</li>
               <li>4.57 cm (1.8 inch) Display</li>
               <li>0.8MP Rear Camera</li>
               <li>2750 mAh Battery</li>
-            </ul>
+            </ul> -->
           </div>
           <div class="product-price">
-            <h2>Rs 1500</h2>
+            <!-- <h2>Rs 1500</h2>
+            <div class="logo-image"><img src="./Myassets/fa_62673a.png" alt=""></div> -->
+           
           </div>
         </div>
       </div>
