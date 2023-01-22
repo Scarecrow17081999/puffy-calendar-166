@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
 
 :root {
   --blue: #287ff0;
@@ -11,7 +11,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   outline: none;
     border: none;
     text-transform: capitalize;
@@ -70,13 +70,14 @@ top: 0px;
   font-size: 14px;
 }
 .btn {
+  display: flex;
   text-align: center;
-  width: 10%;
-  margin-left: 50px;
+  width: 8%;
+  margin-left: 10px;
   top: 14px;
   right: 26rem;
   /* background-color: #fff; */
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .btn button {
@@ -89,6 +90,12 @@ top: 0px;
   outline: none; 
    border: none;
    display: flex;
+   margin-right: 15px;
+   margin-left: 0;
+
+}
+.btn button:active {
+  background-color: rgb(232, 232, 232);
 
 }
 
@@ -660,7 +667,7 @@ input:focus {
 }
 
 #forget {
-  top: -12px;
+  top: -22px;
   left: 417px;
   font-size: 15px;
   font-weight: 500;
@@ -914,7 +921,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 
 .components>div:nth-child(1){
         /* display: flex; */
         width: 100%;
-        height: 290px;
+        /* height: 290px; */
       
         background-color: rgb(25, 33, 49);
         padding:40px;
